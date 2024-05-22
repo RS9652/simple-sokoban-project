@@ -19,7 +19,7 @@ class level {
 public:
 
     level(size_t rows, size_t columns, const char *data);
-    ~level();
+    ~level() = default;
 
     [[nodiscard]] bool is_cell_inside(int row, int column) const {
     assert(row >= 0);
@@ -57,9 +57,10 @@ public:
 
 
 private:
-size_t rows, columns;
-std::vector<char> data;
-size_t entry_row, entry_column;
+    size_t rows, columns;
+    std::vector<char> data;
+    size_t entry_row = static_cast<size_t>(-1);
+    size_t entry_column = static_cast<size_t>(-1);
 
 };
 

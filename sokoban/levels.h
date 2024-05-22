@@ -17,6 +17,7 @@ void load_next_level(){
     current_level = std::make_shared<level>(LEVELS [level_index]);
     size_t entry_row= current_level->get_entry_row();
     size_t entry_column= current_level->get_entry_column();
+    current_level->set_cell(entry_row, entry_column, FLOOR);
     if (current_player == nullptr) {
         current_player = std::make_shared<player>(entry_row, entry_column); }
     else {

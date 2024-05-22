@@ -2,7 +2,6 @@
 
 #include "globals.h"
 #include "levels.h"
-#include "player.h"
 #include "graphics.h"
 #include "images.h"
 #include "sounds.h"
@@ -75,7 +74,8 @@ void draw_game() {
 
 int main() {
     SetConfigFlags(FLAG_VSYNC_HINT | FLAG_MSAA_4X_HINT);
-    InitWindow(1200, 1024, "Sokoban");
+
+    InitWindow(1600, 1200, "Sokoban");
     SetTargetFPS(60);
     HideCursor();
 
