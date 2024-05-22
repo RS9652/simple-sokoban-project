@@ -1,0 +1,41 @@
+Package: vcpkg-cmake-config
+Version: 2022-02-06
+Port-Version: 1
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 297181220fb6ddaaa60c151156fc2bb5f6031b2e7d1aa481a2bf02e90374cc26
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2023-05-04
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 97ca317e51a58745849f20caa45b46398cb4661cec248f7696fc8b84e6aa0342
+Status: install ok installed
+
+Package: glfw3
+Version: 3.4
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 9bb59e94eb9511e2aee77c38b8aa22b5881796628552523ce2c00f1a63affbdf
+Description: GLFW is a free, Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan application development. It provides a simple, platform-independent API for creating windows, contexts and surfaces, reading input, handling events, etc.
+Status: install ok installed
+
+Package: raylib
+Version: 5.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 7bfa376585f7ab92f0aa4736e58c620767853f5f5e5fc3f913e1c4731d5f0670
+Description: A simple and easy-to-use library to enjoy videogames programming
+Default-Features: use-audio
+Status: install ok installed
+
+Package: raylib
+Feature: use-audio
+Architecture: x64-windows
+Multi-Arch: same
+Description: Build raylib with audio module
+Status: install ok installed
+

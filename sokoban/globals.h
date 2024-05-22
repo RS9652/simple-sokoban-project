@@ -2,26 +2,17 @@
 #define GLOBALS_H
 
 #include "raylib.h"
-
 #include <string>
 #include <cstddef>
+#include <memory>
+#include "level.h"
 
 /* Game Elements */
 
-const char WALL           = '#';
-const char FLOOR          = '-';
-const char BOX            = '$';
-const char BOX_ON_GOAL    = '*';
-const char GOAL           = '.';
-const char PLAYER         = '@';
-const char PLAYER_ON_GOAL = '+';
 
 /* Levels */
 
-struct level {
-    size_t rows = 0, columns = 0;
-    char *data = nullptr;
-};
+
 
 char LEVEL_1_DATA[] = {
     ' ', ' ', ' ', ' ', '#', '#', '#', '#', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
@@ -87,13 +78,19 @@ level LEVELS[LEVEL_COUNT] = {
 
 /* Loaded Level Data */
 
-level level;
+std::shared_ptr<level> current_level = std::make_shared<level>(LEVELS[0]);
 size_t level_index = -1;
 
 /* Player Data */
 
+
+#include "player.h"
+
+std::shared_ptr<player> current_player = nullptr;
+/*
 size_t player_row;
 size_t player_column;
+*/
 
 /* Graphics Metrics */
 
@@ -212,14 +209,16 @@ game_state game_state = MENU_STATE;
 
 void load_next_level();
 void unload_level();
+
+/*
 bool is_cell_inside_level(int row, int column);
 char& get_level_cell(size_t row, size_t column);
-void set_level_cell(size_t row, size_t column, char cell);
+void set_level_cell(size_t row, size_t column, char cell);*/
 
 // PLAYER_H
-
+/*
 void spawn_player(size_t row, size_t column);
-void move_player(int dx, int dy);
+void move_player(int dx, int dy);*/
 
 // GRAPHICS_H
 

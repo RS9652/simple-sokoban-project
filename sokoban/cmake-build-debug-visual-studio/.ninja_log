@@ -1,0 +1,22 @@
+# ninja log v5
+1	470	7379826048823761	CMakeFiles/sokoban.dir/sokoban.cpp.obj	bc9ffd608d498a03
+471	2711	7379826050597153	sokoban.exe	52d48303506ecdd7
+11	542	7380012955297807	CMakeFiles/sokoban.dir/level.cpp.obj	5af8379d1f51b5d2
+1	557	7380012955444148	CMakeFiles/sokoban.dir/player.cpp.obj	4e9234eb94e56a83
+0	373	7380014974505427	CMakeFiles/sokoban.dir/sokoban.cpp.obj	bc9ffd608d498a03
+1	829	7380041717586589	CMakeFiles/sokoban.dir/player.cpp.obj	4e9234eb94e56a83
+14	831	7380041717606195	CMakeFiles/sokoban.dir/level.cpp.obj	5af8379d1f51b5d2
+7	846	7380041717760635	CMakeFiles/sokoban.dir/sokoban.cpp.obj	bc9ffd608d498a03
+1	431	7380042214957791	CMakeFiles/sokoban.dir/sokoban.cpp.obj	bc9ffd608d498a03
+432	2039	7380042216116273	sokoban.exe	365430f4047ca28a
+6	864	7380051562457722	CMakeFiles/sokoban.dir/level.cpp.obj	5af8379d1f51b5d2
+1	875	7380051562507748	CMakeFiles/sokoban.dir/sokoban.cpp.obj	bc9ffd608d498a03
+875	2480	7380051564123948	sokoban.exe	365430f4047ca28a
+0	294	7380087207741757	CMakeFiles/sokoban.dir/level.cpp.obj	5af8379d1f51b5d2
+294	1904	7380087209074261	sokoban.exe	365430f4047ca28a
+0	748	7380099382859959	CMakeFiles/sokoban.dir/level.cpp.obj	5af8379d1f51b5d2
+749	2301	7380099383908961	sokoban.exe	365430f4047ca28a
+0	403	7380103047437352	CMakeFiles/sokoban.dir/sokoban.cpp.obj	bc9ffd608d498a03
+404	1949	7380103048795206	sokoban.exe	365430f4047ca28a
+1	240	7380108233027245	CMakeFiles/sokoban.dir/level.cpp.obj	5af8379d1f51b5d2
+240	1800	7380108234359784	sokoban.exe	365430f4047ca28a

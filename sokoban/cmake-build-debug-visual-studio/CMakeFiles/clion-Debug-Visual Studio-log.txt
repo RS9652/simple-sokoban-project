@@ -1,0 +1,32 @@
+"C:\Program Files\JetBrains\CLion 2023.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.3/bin/ninja/win/x64/ninja.exe" -DCMAKE_TOOLCHAIN_FILE=C:\Users\HUAWEI\.vcpkg-clion\vcpkg\scripts\buildsystems\vcpkg.cmake -G Ninja -S C:\Users\HUAWEI\CLionProjects\sokoban-project\sokoban -B C:\Users\HUAWEI\CLionProjects\sokoban-project\sokoban\cmake-build-debug-visual-studio
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-windows...
+Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/cl.exe
+All requested packages are currently installed.
+Total install time: 500 ns
+glfw3 provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(glfw3 CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE glfw)
+
+glfw3 provides pkg-config modules:
+
+    # A multi-platform library for OpenGL, window and input
+    glfw3
+
+raylib provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(raylib CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE raylib)
+
+raylib provides pkg-config modules:
+
+    # A simple and easy-to-use library to enjoy videogames programming
+    raylib
+
+-- Running vcpkg install - done
+-- Configuring done (3.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Users/HUAWEI/CLionProjects/sokoban-project/sokoban/cmake-build-debug-visual-studio

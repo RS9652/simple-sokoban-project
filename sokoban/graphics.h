@@ -58,15 +58,15 @@ void derive_graphics_metrics_from_loaded_level() {
     screen_height = static_cast<float>(GetScreenHeight());
 
     cell_size = std::min(
-        screen_width  / static_cast<float>(level.columns),
-        screen_height / static_cast<float>(level.rows)
+        screen_width  / static_cast<float>(current_level->get_columns()),
+        screen_height / static_cast<float>(current_level->get_rows())
     ) * CELL_SCALE;
     screen_scale = std::min(
         screen_width,
         screen_height
     ) / SCREEN_SCALE_DIVISOR;
-    float level_width  = static_cast<float>(level.columns) * cell_size;
-    float level_height = static_cast<float>(level.rows)    * cell_size;
+    float level_width  = static_cast<float>(current_level->get_columns()) * cell_size;
+    float level_height = static_cast<float>(current_level->get_rows())    * cell_size;
     shift_to_center_cell_by_x = (screen_width - level_width)   * 0.5f;
     shift_to_center_cell_by_y = (screen_height - level_height) * 0.5f;
 }
@@ -74,12 +74,12 @@ void derive_graphics_metrics_from_loaded_level() {
 void draw_loaded_level() {
     ClearBackground(BLACK);
 
-    for (size_t row = 0; row < level.rows; ++row) {
-        for (size_t column = 0; column < level.columns; ++column) {
+    for (size_t row = 0; row < current_level->get_rows(); ++row) {
+        for (size_t column = 0; column < current_level->get_columns(); ++column) {
             float x = shift_to_center_cell_by_x + static_cast<float>(column) * cell_size;
             float y = shift_to_center_cell_by_y + static_cast<float>(row)    * cell_size;
 
-            char cell = get_level_cell(row, column);
+            char cell = current_level->get_cell(row, column);
             switch (cell) {
                 case FLOOR:
                 case GOAL:
@@ -110,8 +110,8 @@ void draw_loaded_level() {
 }
 
 void draw_player() {
-    float x = shift_to_center_cell_by_x + static_cast<float>(player_column) * cell_size;
-    float y = shift_to_center_cell_by_y + static_cast<float>(player_row)    * cell_size;
+    float x = shift_to_center_cell_by_x + static_cast<float>(current_player->get_column()) * cell_size;
+    float y = shift_to_center_cell_by_y + static_cast<float>(current_player->get_row())    * cell_size;
     draw_sprite(player_sprite, x, y, cell_size);
 }
 
